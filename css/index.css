@@ -38,6 +38,10 @@ body.dark {
   font-family: 'Hindi_Font';
   src: url(../fonts/Hindi_Type.ttf);
 }
+@font-face {
+  font-family: 'chenjing';
+  src: url(../fonts/chenjing2.ttf);
+}
 
 /* Default CSS Changes */
 * {
@@ -46,7 +50,7 @@ body.dark {
 body {
   background-color: var(--background-primary);
   color: var(--font-color-primary);
-  padding: 100px 100px;
+  padding: 50px 30px;
   font-size: 1.05rem;
   font-family: var(--font-family-primary);
 }
@@ -68,6 +72,7 @@ button {
 
 h1 {
   font-size: 3rem;
+  margin: 0 0 24px;
 }
 
 label {
@@ -208,7 +213,7 @@ body.dark .github-corner {
   height: calc(11.7 * 400px / 8.3); /* A4 Ratio */
   background: #fff;
   border: 1px solid var(--elevation-background);
-  font-size: 10pt;
+  font-size: 15pt;
   position: relative;
   top: 0px;
   font-family: var(--handwriting-font);

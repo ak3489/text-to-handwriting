@@ -64,7 +64,7 @@ function removePaperStyles() {
 function renderOutput(outputImages) {
   if (outputImages.length <= 0) {
     document.querySelector('#output').innerHTML =
-      'Click "Generate Image" Button to generate new image.';
+      '点击"生成图片" 按钮以重新生成图片.';
     document.querySelector('#download-as-pdf-button').classList.remove('show');
     document.querySelector('#delete-all-button').classList.remove('show');
     return;
@@ -94,7 +94,7 @@ function renderOutput(outputImages) {
           class="button download-image-button" 
           download 
           href="${outputImageCanvas.toDataURL('image/jpeg')}
-        ">Download Image</a>
+        ">下载图片</a>
         <br/>
         <br/>
 
@@ -102,13 +102,13 @@ function renderOutput(outputImages) {
           class="button move-left"
           data-index="${index}" 
         >
-          Move Left
+          左移
         </button>
         <button 
           class="button move-right"
           data-index="${index}" 
         >
-          Move Right
+          右移
         </button>
       </div>
     </div>

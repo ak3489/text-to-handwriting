@@ -1,3 +1,4 @@
 node_modules/
+.history/
 # Add .npmrc when you have multiple node binaries.
 .npmrc

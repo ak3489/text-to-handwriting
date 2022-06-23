@@ -63,7 +63,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@saurabhcodes" />
 
-    <title>Text to Handwriting</title>
+    <title>生成手写体</title>
 
     <!-- Favicons -->
     <link
@@ -120,16 +120,15 @@
             src="images/moon.svg"
         /></span>
       </button>
-      <h1>Text to Handwriting</h1>
+      <h1>生成手写体</h1>
       <section class="generate-image-section">
-        <br /><br />
         <form id="generate-image-form">
           <!-- Generate Image Section -->
           <div class="display-flex output-grid responsive-flex">
             <div class="flex-1 page-container-super">
               <div>
-                <h2 style="margin-top: 0px;">Input</h2>
-                <label class="block" for="note">Type/Paste text here</label>
+                <!-- <h2 style="margin-top: 0px;">Input</h2> -->
+                <label class="block" for="note">在此输入文本</label>
               </div>
 
               <div class="flex-1 page-container">
@@ -138,24 +137,10 @@
                   <div class="display-flex left-margin-and-content">
                     <div contenteditable="true" class="left-margin"></div>
                     <div class="paper-content" id="note" contenteditable="true">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Ut rhoncus dui eget tortor feugiat iaculis. Morbi et dolor
-                      in felis viverra efficitur. Integer id laoreet arcu.
-                      Mauris turpis nibh, scelerisque sed tristique non,
-                      hendrerit in erat. Duis interdum nisl risus, ac ultrices
-                      ipsum auctor at. Aliquam faucibus iaculis metus sit amet
-                      tincidunt. Vestibulum cursus urna vel nunc imperdiet
-                      suscipit. Ut eu augue egestas, porta orci lobortis,
-                      pharetra orci. Morbi eu tellus quis nisi tempor accumsan
-                      nec eu urna. empor, ullamcorper tortor. Mauris quis
-                      fermentum augue. Phasellus ac nisl hendrerit, fringilla
-                      enim aliquam, placerat odio. Ut tortor nisi, pellentesque
-                      sed nisi at, hendrerit imperdiet turpis. Proin interdum
-                      porttitor metus at hendrerit. Proin ipsum nisl, lacinia
-                      vitae purus ullamcorper, maximus convallis sem. Sed nec
-                      lacinia lorem. Duis arcu metus, cursus non odio quis,
-                      tincidunt tempor augue. Donec eget vestibulum risus.
-                      Nullam blandit quis est vitae feugiat.
+                      中途，朱光庆在路边的水果摊买了一挂香蕉，那时候香蕉才一毛钱一斤，一挂也就两毛钱。
+来到车站外围，远远看去，便能看到“韶关站”这三个大字。车站上面的大喇叭，播放着邓丽君的《漫步人生路》。车站外面人不算很多，但也不少，来来往往，大多数都带着行李，有些还拖家带口的。
+那时候的穿着打扮，流行戴蛤蟆镜，穿花格子衬衫，大喇叭裤，很多二三十岁的青年，都会这样打扮，而且头发留得比较长，大鬓角，小胡子。而女生，则流行穿健美裤，配上上身的花格衬衫，或者百褶裙子。
+三叔刚从农村出来，看着车站里头人来人往，穿的花花绿绿，都很好看，不由心往神怡，那时候他最大的愿望，就是能买一副属于自己的蛤蟆镜，然后脖子上再配上一条金链，假的金链也行，只要看起来够炫酷就好。年轻人的心性都是这样，追潮流，从众，爱炫耀。
                     </div>
                   </div>
                   <div class="overlay"></div>
@@ -170,7 +155,7 @@
                   style="font-size: 0.9rem; margin-top: 5px;"
                   class="draw-button"
                 >
-                  Draw <small>(Beta)</small>
+                  绘图 <small>(测试版)</small>
                 </button>
               </div>
             </div>
@@ -178,21 +163,18 @@
             <div class="customization-col">
               <!-- Handwriting Font -->
               <div style="padding: 5px 0px 5px 0px;">
-                <b>Customizations</b> <small>(Optional)</small>
+                <b>自定义</b> <small>(参数)</small>
                 <p style="font-size: 0.8rem;">
-                  <em
-                    >Note: Few changes may reflect only in the generated image
-                    and not in the preview</em
-                  >
+                  <em>注意:少数的变化可能只反映在生成的图像，而不是在预览</em>
                 </p>
               </div>
               <fieldset>
-                <legend>Handwriting Options</legend>
+                <legend>笔迹选项</legend>
 
                 <div class="category-grid">
                   <div>
                     <label class="block" for="handwriting-font"
-                      >Handwriting Font</label
+                      >手写字体</label
                     >
                     <select id="handwriting-font">
                       <option
@@ -203,6 +185,7 @@
                         Homemade Apple
                       </option>
                       <option value="Hindi_Font">Kruti-dev(Hindi)</option>
+                      <option value="chenjing">陈静的字完整版_魔改2</option>
                       <option
                         style="font-family: 'Caveat', cursive; font-size: 13pt;"
                         value="'Caveat', cursive"
@@ -222,7 +205,7 @@
                   </div>
                   <div class="upload-handwriting-container">
                     <label class="block" for="font-file"
-                      >Upload your handwriting font <small>(Beta)</small>&nbsp;
+                      >上传手写字体<small>(测试版)</small>&nbsp;
                       <a
                         style="font-size: 1.1rem;"
                         title="How to add your own handwriting"
@@ -238,21 +221,21 @@
 
               <!-- Pen ink color, Font size, Vertical position text, Word Spacing -->
               <fieldset>
-                <legend>Page & Text Options</legend>
+                <legend>页面和文本选项</legend>
 
                 <div class="category-grid">
                   <div class="postfix-input" data-postfix="pt">
-                    <label for="font-size">Font Size</label>
+                    <label for="font-size">字体大小</label>
                     <input
                       id="font-size"
                       min="0"
                       step="0.5"
-                      value="10"
+                      value="15"
                       type="number"
                     />
                   </div>
                   <div>
-                    <label class="block" for="ink-color">Ink Color</label>
+                    <label class="block" for="ink-color">墨水的颜色</label>
                     <select id="ink-color">
                       <option default value="#000f55">Blue</option>
                       <option value="black">Black</option>
@@ -260,13 +243,13 @@
                     </select>
                   </div>
                   <div>
-                    <label class="block" for="page-size">Page Size</label>
+                    <label class="block" for="page-size">页面大小</label>
                     <select id="page-size">
                       <option default value="a4">A4 &nbsp;</option>
                     </select>
                   </div>
                   <div>
-                    <label class="block" for="page-effects">Effects</label>
+                    <label class="block" for="page-effects">特效</label>
                     <select id="page-effects">
                       <option default value="shadows">Shadows</option>
                       <option value="scanner">Scanner</option>
@@ -274,7 +257,7 @@
                     </select>
                   </div>
                   <div>
-                    <label class="block" for="resolution">Resolution</label>
+                    <label class="block" for="resolution">分辨率</label>
                     <select id="resolution">
                       <option value="0.8">Very Low</option>
                       <option value="1">Low</option>
@@ -287,15 +270,15 @@
               </fieldset>
 
               <fieldset>
-                <legend>Spacing Options</legend>
+                <legend>间距</legend>
 
                 <div class="category-grid">
                   <div class="postfix-input" data-postfix="px">
-                    <label for="top-padding">Vertical Position</label>
+                    <label for="top-padding">垂直距离</label>
                     <input id="top-padding" min="0" value="5" type="number" />
                   </div>
                   <div class="postfix-input" data-postfix="px">
-                    <label for="word-spacing">Word Spacing</label>
+                    <label for="word-spacing">字间距</label>
                     <input
                       id="word-spacing"
                       min="0"
@@ -305,7 +288,7 @@
                     />
                   </div>
                   <div class="postfix-input" data-postfix="pt">
-                    <label for="letter-spacing">Letter Spacing</label>
+                    <label for="letter-spacing">字符间距</label>
                     <input
                       id="letter-spacing"
                       min="-5"
@@ -324,7 +307,7 @@
                 <div class="category-grid">
                   <div>
                     <label for="paper-margin-toggle"
-                      >Paper Margin:
+                      >页边距:
                       <span aria-label="paper margin status" class="status"
                         >on</span
                       >
@@ -343,7 +326,7 @@
 
                   <div>
                     <label for="paper-line-toggle"
-                      >Paper Lines:
+                      >纸行:
                       <span aria-label="paper line status" class="status"
                         >on</span
                       >
@@ -363,7 +346,7 @@
                     <!-- Removed option -->
                     <div class="upload-paper-container">
                       <label class="block" for="paper-file"
-                        >Upload Paper Image as Background</label
+                        >上传图片作为背景</label
                       >
                       <input
                         accept=".jpg, .jpeg, .png"
@@ -388,7 +371,7 @@
                   data-testid="generate-image-button"
                   class="button generate-image-button"
                 >
-                  Generate Image
+                  生成图片
                 </button>
               </div>
             </div>
@@ -398,16 +381,16 @@
 
       <!-- OUTPUT -->
       <section>
-        <h2 id="output-header">Output</h2>
+        <h2 id="output-header">输出</h2>
         <div id="output" class="output" style="text-align: center;">
-          Click "Generate Image" Button to generate new image.
+          按“生成图片”按钮以生成新的图像。
         </div>
         <div style="text-align: center; padding: 30px;">
           <button class="imp-button" id="download-as-pdf-button">
-            Download All Images as PDF
+            下载为 PDF
           </button>
           <button class="delete-button" id="delete-all-button">
-            Clear all images
+            清除图片
           </button>
         </div>
       </section>
@@ -547,7 +530,7 @@
             id="draw-download-button"
             style="margin-top: 5px; margin-bottom: 5px;"
           >
-            Download Image
+            下载图片
           </button>
           <br /><br />
           <input
